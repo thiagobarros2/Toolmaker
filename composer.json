@@ -1,0 +1,39 @@
+{
+    "name": "thiagobarros2/toolmaker",
+    "description": "",
+    "keywords": [
+        "php",
+        "framework"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.1"
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "ThiagoBarros\\Toolmaker\\": "src/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.5.2",
+        "pestphp/pest-plugin": "^2.0.1",
+        "pestphp/pest-dev-tools": "^2.6.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "lint": "pint",
+        "test:lint": "pint --test",
+        "test": [
+            "@test:lint"
+        ]
+    }
+}
